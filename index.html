@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lo que quería decir — Cartas</title>
+
+  <!-- Estilos -->
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #fff0f5; /* rosa sakura */
+      font-family: "Georgia", serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      background: #ffe4ec;
+      padding: 1rem;
+      text-align: center;
+      width: 100%;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+      color: #333;
+    }
+
+    header p {
+      margin: 0.3rem 0 0;
+      color: #555;
+    }
+
+    #flipbook {
+      width: 800px;
+      height: 500px;
+      margin-top: 2rem;
+    }
+
+    .page {
+      background: #fff;
+      border: 1px solid #f8d7e0;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 2rem;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    .page h2 {
+      margin-top: 0;
+      color: #d63384;
+    }
+  </style>
+
+  <!-- Librería Turn.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4.1.0/turn.min.js"></script>
+</head>
+<body>
+
+  <header>
+    <h1>Lo que quería decir</h1>
+    <p>Una colección de cartas</p>
+  </header>
+
+  <!-- Cuadernillo -->
+  <div id="flipbook">
+    <!-- Carta 1 -->
+    <div class="page">
+      <h2>Carta 1 — RECUERDOS</h2>
+      <p>
+        Hoy recordé cómo empezó todo, las pequeñas conversaciones, los momentos que parecían insignificantes
+        pero que al final guardaron tanto valor. A veces siento que cada detalle formó un hilo invisible,
+        y aunque el tiempo pase, esos recuerdos siguen tan vivos en mí como el primer día.
+      </p>
+    </div>
+
+    <!-- Carta 2 -->
+    <div class="page">
+      <h2>Carta 2 — GRATITUD</h2>
+      <p>
+        No suelo decirlo, pero quiero agradecerte por lo mucho que me diste sin darte cuenta.
+        Tu compañía, tus palabras y hasta tus silencios significaron más de lo que imaginas.
+        No todos los días uno encuentra a alguien que deje huella sin proponérselo.
+      </p>
+    </div>
+
+    <!-- Carta 3 -->
+    <div class="page">
+      <h2>Carta 3 — LO QUE CALLÉ</h2>
+      <p>
+        Muchas veces guardé lo que sentía por miedo a arruinar lo que teníamos.
+        Me pregunté si decirlo habría cambiado algo, pero al final entendí que el silencio también
+        es una forma de cuidar. Aun así, esas palabras siguen ahí, esperando ser escuchadas.
+      </p>
+    </div>
+
+    <!-- Carta 4 -->
+    <div class="page">
+      <h2>Carta 4 — DISTANCIA</h2>
+      <p>
+        El tiempo y la distancia se interponen, pero no borran. A veces duelen, sí,
+        pero también enseñan a valorar lo que fue. Quizá no volvamos a coincidir igual,
+        pero cada encuentro, cada risa y cada momento compartido, los guardo intactos.
+      </p>
+    </div>
+
+    <!-- Carta 5 -->
+    <div class="page">
+      <h2>Carta 5 — DESPEDIDA</h2>
+      <p>
+        No es un adiós definitivo, porque lo que se siente nunca desaparece del todo.
+        Es más bien un “gracias” por haber estado, por ser parte de mi historia y por darme
+        la oportunidad de aprender contigo. Lo que quería decirte era simple: gracias por existir.
+      </p>
+    </div>
+  </div>
+
+  <!-- Script para activar el cuadernillo -->
+  <script>
+    window.addEventListener("load", () => {
+      document.getElementById("flipbook").turn({
+        width: 800,
+        height: 500,
+        autoCenter: true,
+        gradients: true,
+        acceleration: true
+      });
+    });
+  </script>
+</body>
+</html>
